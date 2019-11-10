@@ -58,33 +58,33 @@ class CodeGeneratorTest {
         String packageName = "com.baomidou.springboot";
         enableTableFieldAnnotation = false;
         tableIdType = null;
-        generateByTables(packageName + ".noannoidtype", "user");
+        generateByTables(packageName + ".noannoidtype", "overview");
         enableTableFieldAnnotation = true;
         tableIdType = null;
-        generateByTables(packageName + ".noidtype", "user");
+        generateByTables(packageName + ".noidtype", "overview");
         enableTableFieldAnnotation = false;
         tableIdType = IdType.INPUT;
-        generateByTables(packageName + ".noanno", "user");
+        generateByTables(packageName + ".noanno", "overview");
         enableTableFieldAnnotation = true;
         tableIdType = IdType.INPUT;
-        generateByTables(packageName + ".both", "user");
+        generateByTables(packageName + ".both", "overview");
 
         fieldPrefix = new String[]{"test"};
         enableTableFieldAnnotation = false;
         tableIdType = null;
-        generateByTables(packageName + ".noannoidtypewithprefix", "user");
+        generateByTables(packageName + ".noannoidtypewithprefix", "overview");
         enableTableFieldAnnotation = true;
         tableIdType = null;
-        generateByTables(packageName + ".noidtypewithprefix", "user");
+        generateByTables(packageName + ".noidtypewithprefix", "overview");
         enableTableFieldAnnotation = false;
         tableIdType = IdType.INPUT;
-        generateByTables(packageName + ".noannowithprefix", "user");
+        generateByTables(packageName + ".noannowithprefix", "overview");
         enableTableFieldAnnotation = true;
         tableIdType = IdType.INPUT;
-        generateByTables(packageName + ".withannoidtypeprefix", "user");
+        generateByTables(packageName + ".withannoidtypeprefix", "overview");
 
         serviceClassNameStartWithI = false;
-        generateByTables(packageName, "user");
+        generateByTables(packageName, "overview");
     }
 
     private void generateByTables(String packageName, String... tableNames) {

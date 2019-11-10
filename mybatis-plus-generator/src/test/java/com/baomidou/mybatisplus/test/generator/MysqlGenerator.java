@@ -57,7 +57,7 @@ public class MysqlGenerator extends GeneratorTest {
         AutoGenerator mpg = new AutoGenerator().setGlobalConfig(
             // 全局配置
             new GlobalConfig()
-                .setOutputDir("../")//输出目录
+                .setOutputDir("..\\")//输出目录
                 .setFileOverride(true)// 是否覆盖文件
                 .setActiveRecord(true)// 开启 activeRecord 模式
                 .setEnableCache(false)// XML 二级缓存
@@ -102,8 +102,8 @@ public class MysqlGenerator extends GeneratorTest {
                 })
                 .setDriverName(Driver.class.getName())
                 .setUsername("root")
-                .setPassword("1q2w3e4r")
-                .setUrl("jdbc:mysql://127.0.0.1:3306/mybatis-plus?useUnicode=true&allowPublicKeyRetrieval=true&useSSL=false&characterEncoding=utf8")
+                .setPassword("root")
+                .setUrl("jdbc:mysql://localhost:3306/mybatis-plus?useUnicode=true&allowPublicKeyRetrieval=true&useSSL=false&characterEncoding=utf8")
         ).setStrategy(
             // 策略配置
             new StrategyConfig()
@@ -129,12 +129,12 @@ public class MysqlGenerator extends GeneratorTest {
             // .setSuperControllerClass("com.baomidou.demo.TestController")
             // 【实体】是否生成字段常量（默认 false）
             // public static final String ID = "test_id";
-            // .setEntityColumnConstant(true)
+             .setEntityColumnConstant(true)
             // 【实体】是否为构建者模型（默认 false）
             // public User setName(String name) {this.name = name; return this;}
-            // .setEntityBuilderModel(true)
+             .setEntityBuilderModel(true)
             // 【实体】是否为lombok模型（默认 false）<a href="https://projectlombok.org/">document</a>
-            // .setEntityLombokModel(true)
+             .setEntityLombokModel(true)
             // Boolean类型字段是否移除is前缀处理
             // .setEntityBooleanColumnRemoveIsPrefix(true)
             // .setRestControllerStyle(true)

@@ -50,8 +50,8 @@ class MybatisTest {
     @Test
     void test() throws IOException, SQLException {
         JdbcDataSource dataSource = new JdbcDataSource();
-        dataSource.setUser("sa");
-        dataSource.setPassword("");
+        dataSource.setUser("root");
+        dataSource.setPassword("root");
         dataSource.setUrl("jdbc:h2:mem:test;MODE=mysql;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE");
         Reader reader = Resources.getResourceAsReader("mybatis-config.xml");
         SqlSessionFactory factory = new MybatisSqlSessionFactoryBuilder().build(reader);

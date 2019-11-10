@@ -41,9 +41,9 @@ public class DBConfig {
     public DataSource dataSource() {
         SimpleDriverDataSource dataSource = new SimpleDriverDataSource();
         dataSource.setDriverClass(com.mysql.cj.jdbc.Driver.class);
-        dataSource.setUrl("jdbc:mysql://localhost:3306/mybatis_plus?useSSL=false&useUnicode=true&characterEncoding=UTF-8");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/mybatis_plus");
         dataSource.setUsername("root");
-        dataSource.setPassword("123456");
+        dataSource.setPassword("root");
         return dataSource;
     }
 
